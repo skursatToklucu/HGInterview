@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HizliGeliyoEcom.Core.Mapping
 {
-    public class ProductMap<T> : IEntityTypeConfiguration<T> where T : ProductEntity
+    public class SideMap<T> : IEntityTypeConfiguration<T> where T : ProductEntity
     {
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {
