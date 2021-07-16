@@ -16,11 +16,11 @@ namespace HizliGeliyoEcom.DataAccess.Repositories.Abstract
 
         bool Remove(T item);
 
-        bool Remove(Guid id);
+        bool Remove(int id);
 
         bool RemoveAll(Expression<Func<T, bool>> exp);
 
-        T GetByID(Guid id);
+        T GetByID(int id);
 
         T GetByDefault(Expression<Func<T, bool>> exp);
 
@@ -30,7 +30,7 @@ namespace HizliGeliyoEcom.DataAccess.Repositories.Abstract
 
         List<T> GetAll();
 
-        bool Activate(Guid id);
+        bool Activate(int id);
 
         bool Any(Expression<Func<T, bool>> exp);
 

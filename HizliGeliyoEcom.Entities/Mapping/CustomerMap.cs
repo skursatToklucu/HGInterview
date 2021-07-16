@@ -11,7 +11,7 @@ namespace HizliGeliyoEcom.Entities.Mapping
     {
         public override void Configure(EntityTypeBuilder<Customer> builder)
         {
-            builder.HasMany(x => x.Products).WithOne(x => x.Customer).OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.NoAction);
+            builder.HasMany(x => x.Orders).WithOne(x => x.Customer).OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.NoAction);
 
 
             base.Configure(builder);

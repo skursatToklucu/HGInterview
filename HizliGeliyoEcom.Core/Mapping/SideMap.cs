@@ -7,11 +7,13 @@ using System.Text;
 
 namespace HizliGeliyoEcom.Core.Mapping
 {
-    public class SideMap<T> : IEntityTypeConfiguration<T> where T : ProductEntity
+    public class SideMap<T> : IEntityTypeConfiguration<T> where T : SideEntity
     {
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.HasKey(x => x.ID);
+
+
         }
     }
 }

@@ -1,47 +1,40 @@
 ﻿using HizliGeliyoEcom.Core.Entity.Concrete;
+using HizliGeliyoEcom.DataAccess.Context;
 using HizliGeliyoEcom.DataAccess.Repositories.Abstract;
+using HizliGeliyoEcom.Entities.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Net;
+using System.Net.Mail;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace HizliGeliyoEcom.DataAccess.Repositories.Concrete
 {
-    public class UserRepository<T> : IUserRepository<T> where T : UserEntity
+    public class UserRepository : Repository<Customer>
     {
-        public bool Activate(Guid id)
+
+        private readonly ProjectContext _context;
+        private IHttpContextAccessor _httpContext;
+
+        public UserRepository(ProjectContext context, IHttpContextAccessor httpContext) : base(context, httpContext)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _httpContext = httpContext;
         }
 
-        public bool Add(T item)
+
+        public Customer CreateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            customer.Status = Core.Enum.Status.Active;
+            customer.Password = GenerateToken(8);
+
+            return customer;
         }
 
-        public List<T> GetActive()
-        {
-            throw new NotImplementedException();
-        }
-
-        public T GetByDefault(Expression<Func<T, bool>> exp)
-        {
-            throw new NotImplementedException();
-        }
-
-        public T GetByID(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<T> GetDefault(Expression<Func<T, bool>> exp)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Save()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

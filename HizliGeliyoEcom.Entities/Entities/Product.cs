@@ -7,7 +7,8 @@ namespace HizliGeliyoEcom.Entities.Entities
 {
     public class Product : ProductEntity
     {
-        public Guid CustomerID { get; set; }
-        public virtual Customer Customer { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+
+
     }
 }

@@ -11,8 +11,8 @@ namespace HizliGeliyoEcom.DataAccess.Context
         public ProjectContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ProjectContext>();
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-B77ITTF;Database=ScrumDB;Trusted_Connection=true");
-
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-B77ITTF;Database=HizliGeliyoDB;Trusted_Connection=true");
+            
             return new ProjectContext(optionsBuilder.Options);
         }
     }

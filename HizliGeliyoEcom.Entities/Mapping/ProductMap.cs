@@ -7,12 +7,14 @@ using System.Text;
 
 namespace HizliGeliyoEcom.Entities.Mapping
 {
-    public class ProductMap : SideMap<Product>
+    public class ProductMap : ProductMap<Product>
     {
 
         public override void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasOne(x => x.Customer).WithMany(x => x.Products).HasForeignKey(x => x.CustomerID).OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.NoAction);
+
+            builder.HasKey(x => x.ID);
+
 
 
             base.Configure(builder);

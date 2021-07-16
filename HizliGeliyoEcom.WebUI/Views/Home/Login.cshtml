@@ -1,0 +1,79 @@
+﻿@model HizliGeliyoEcom.Entities.Entities.Customer
+
+@{
+    ViewData["Title"] = "Giriş Sayfası";
+    Layout = null;
+}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="~/fonts/icomoon/style.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<!-- Style -->
+<link rel="stylesheet" href="~/css/style.css">
+
+<div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2 logo">
+        <img src="http://hizligeliyo.com/images/logo.png" class="logo img-fluid mr-5" />
+    </div>
+    <div class="contents order-2 order-md-1">
+
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h3><strong>Giriş Yap</strong></h3>
+                    <p class="mb-4">Hızlı Geliyo Mülakat Projesi</p>
+                    <form asp-action="Login" asp-controller="Home" method="post">
+                        <div class="form-group first">
+                            <label for="E-Posta Adresi">E-Posta Adresi</label>
+                            <input type="text" class="form-control" placeholder="Kullanıcı Adı" asp-for="Email">
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                        <div class="form-group last mb-3">
+                            <label for="Şifre">Password</label>
+                            <input type="password" class="form-control " placeholder="Şifre" data-toggle="password" asp-for="Password">
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+
+                        <div class="d-flex mb-5 align-items-center">
+                            <label class="field-validation-error">@ViewBag.Hata</label>
+                            <span class="ml-auto"><a class="forgot-pass" asp-action="ForgotPassword" asp-controller="Home">Parolamı Unuttum</a></span>
+                        </div>
+
+                        <input type="submit" value="Giriş Yap" class="btn btn-block btn-success">
+                        <a href="~/Home/SignUp" class="btn btn-block btn-warning mt-5 align-items-center" style="text-decoration:none; color:white">Kayıt Ol!</a>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<style>
+    .input-group {
+        margin-bottom: 5px;
+    }
+</style>
+<script>
+    $(function () {
+        $('#password').password()
+    })
+</script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>

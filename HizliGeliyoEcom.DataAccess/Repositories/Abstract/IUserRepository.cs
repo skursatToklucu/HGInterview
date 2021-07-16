@@ -10,6 +10,8 @@ namespace HizliGeliyoEcom.DataAccess.Repositories.Abstract
     {
         bool Add(T item);
 
+        bool Update(T item);
+
         T GetByID(Guid id);
 
         T GetByDefault(Expression<Func<T, bool>> exp);
@@ -19,6 +21,8 @@ namespace HizliGeliyoEcom.DataAccess.Repositories.Abstract
         List<T> GetDefault(Expression<Func<T, bool>> exp);
 
         bool Activate(Guid id);
+
+        bool Any(Expression<Func<T, bool>> exp);
 
         int Save();
     }

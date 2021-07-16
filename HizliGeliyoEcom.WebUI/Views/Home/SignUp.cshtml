@@ -1,0 +1,67 @@
+﻿@model HizliGeliyoEcom.Entities.Entities.Customer
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+<div class="container-fluid w-50">
+    <div>
+        <h1>Kayıt Ol</h1>
+        <form asp-action="SignUp" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>@TempData["Message"].ToString()</strong>
+                </div>
+            }
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">İsim</label>
+                <input required asp-for="Name" class="form-control" placeholder="Lütfen İsminizi Giriniz" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surname" class="control-label">Soyisim</label>
+                <input required asp-for="Surname" class="form-control" placeholder="Lütfen Soyisminizi Giriniz" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Mail Adresi</label>
+                <input required type="email" asp-for="Email" class="form-control" placeholder="Lütfen Email Adresinizi Giriniz" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group d-none">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input id="submit" type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+            <div>
+                <a asp-action="Login" asp-controller="Home">Geri Dön</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById('submit').addEventListener('click', () => {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Kayıt Başarılı',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    });
+</script>
+
+
+
+
+

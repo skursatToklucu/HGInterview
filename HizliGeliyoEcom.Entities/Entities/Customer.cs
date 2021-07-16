@@ -7,6 +7,7 @@ namespace HizliGeliyoEcom.Entities.Entities
 {
     public class Customer : UserEntity
     {
-        public virtual ICollection<Product> Products { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
