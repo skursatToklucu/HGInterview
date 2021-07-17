@@ -1,6 +1,8 @@
 using HizliGeliyoEcom.DataAccess.Context;
+
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,7 @@ namespace HizliGeliyoEcom.WebUI
 
             services.AddDbContext<ProjectContext>(options =>
             {
+
                 options.UseSqlServer(@"Server=DESKTOP-B77ITTF;Database=HizliGeliyoDB;Trusted_Connection=true");
                 options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
@@ -60,6 +63,7 @@ namespace HizliGeliyoEcom.WebUI
                 .RequireAuthenticatedUser() //Sisteme yetkili kullanýcý
                 .Build();
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +87,10 @@ namespace HizliGeliyoEcom.WebUI
             app.UseRouting();
             app.UseAuthentication();
             app.UseSession();
+
+            app.UseRouting();
+
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -90,6 +98,8 @@ namespace HizliGeliyoEcom.WebUI
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Login}/{id?}");
+
+
             });
         }
     }
