@@ -13,7 +13,6 @@ namespace HizliGeliyoEcom.Core.Mapping
         {
             builder.HasKey(x => x.ID);
 
-
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HizliGeliyoEcom.Core.Mapping
 {
-    public class CoreMap<T> : IEntityTypeConfiguration<T> where T : UserEntity
+    public class CoreMap<T> : IEntityTypeConfiguration<T> where T : CoreEntity
     {
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {

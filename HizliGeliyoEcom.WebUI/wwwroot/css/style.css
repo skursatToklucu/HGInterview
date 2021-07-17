@@ -1,13 +1,11 @@
 ﻿html,
 body {
-    height: 100%
-}
-
-body {
+    height: 100%;
     display: grid;
     background: #fff;
     font-family: 'Manrope', sans-serif
 }
+
 p {
     color: #b3b3b3;
     font-weight: 300;
@@ -301,125 +299,32 @@ h2 {
     top: 17px
 }
 
-div {
-    display: block;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
+/*theme*/
+
+.carousel {
+    height: 50%;
 }
 
-.bbb_deals_featured {
-    width: 100%
-}
-
-.bbb_deals {
-    width: 100%;
-    margin-right: 7%;
-    padding-top: 80px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 34px;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 0px
-}
-
-.bbb_deals_title {
-    position: absolute;
-    top: 10px;
-    left: 22px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #000000
-}
-
-.bbb_deals_slider_container {
-    width: 100%
-}
-
-.bbb_deals_item {
-    width: 100% !important
-}
-
-.bbb_deals_image {
-    width: 100%
-}
-
-    .bbb_deals_image img {
-        width: 100%
+    .carousel .carousel-inner {
+        height: 100%;
     }
 
-.bbb_deals_content {
-    margin-top: 33px
-}
+        .carousel .carousel-inner .carousel-item,
+        .carousel .carousel-inner .active {
+            height: 100%;
+        }
 
-.bbb_deals_item_category a {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5)
-}
-
-.bbb_deals_item_price_a {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.6)
-}
-
-    .bbb_deals_item_price_a strike {
-        color: red
-    }
-
-.bbb_deals_item_name {
-    font-size: 24px;
-    font-weight: 400;
-    color: #000000
-}
-
-.bbb_deals_item_price {
-    font-size: 24px;
-    font-weight: 500;
-    color: #6d6e73
-}
-
-.available {
-    margin-top: 19px
-}
-
-.available_title {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 400
-}
-
-    .available_title span {
-        font-weight: 700
-    }
-
-@media only screen and (max-width: 991px) {
-    .bbb_deals {
-        width: 100%;
-        margin-right: 0px
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+    .carousel {
+        height: 100%;
     }
 }
 
-@media only screen and (max-width: 575px) {
-    .bbb_deals {
-        padding-left: 15px;
-        padding-right: 15px
-    }
-
-    .bbb_deals_title {
-        left: 15px;
-        font-size: 16px
-    }
-
-    .bbb_deals_slider_nav_container {
-        right: 5px
-    }
-
-    .bbb_deals_item_name,
-    .bbb_deals_item_price {
-        font-size: 20px
-    }
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+    background-color: #929FBA;
 }
+
+
+

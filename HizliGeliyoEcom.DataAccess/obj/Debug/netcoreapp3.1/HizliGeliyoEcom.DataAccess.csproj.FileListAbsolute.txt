@@ -1,0 +1,17 @@
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.csprojAssemblyReference.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.AssemblyInfoInputs.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.AssemblyInfo.cs
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.deps.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.runtimeconfig.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.runtimeconfig.dev.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.csproj.CopyComplete
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.DataAccess\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.DataAccess.genruntimeconfig.cache

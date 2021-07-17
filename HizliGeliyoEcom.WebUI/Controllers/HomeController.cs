@@ -41,8 +41,8 @@ namespace HizliGeliyoEcom.WebUI.Controllers
             {
                 Guid getID = _userRepository.GetByDefault(x => x.Email == email).ID;
                 await HttpContext.SignInAsync(_userRepository.LoginClaims(customer));
-                HttpContext.Session.SetString("UserID", getID.ToString());
-                return RedirectToAction("Login", "Home");
+                HttpContext.Session.SetString("CustomerID", getID.ToString());
+                return RedirectToAction("Index", "Shop");
             }
             else
             {

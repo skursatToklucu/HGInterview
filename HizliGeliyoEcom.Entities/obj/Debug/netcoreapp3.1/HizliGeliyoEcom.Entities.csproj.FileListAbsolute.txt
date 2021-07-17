@@ -1,0 +1,12 @@
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.deps.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.csprojAssemblyReference.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.AssemblyInfoInputs.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.AssemblyInfo.cs
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.csproj.CoreCompileInputs.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.csproj.CopyComplete
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Entities\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Entities.pdb

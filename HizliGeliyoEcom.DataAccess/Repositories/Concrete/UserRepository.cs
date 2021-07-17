@@ -15,7 +15,7 @@ using System.Text;
 
 namespace HizliGeliyoEcom.DataAccess.Repositories.Concrete
 {
-    public class UserRepository : Repository<Customer>
+    public class UserRepository : CoreRepository<Customer>
     {
 
         private readonly ProjectContext _context;
@@ -34,6 +34,32 @@ namespace HizliGeliyoEcom.DataAccess.Repositories.Concrete
             customer.Password = GenerateToken(8);
 
             return customer;
+        }
+
+        /// <summary>
+        /// Sepetteki tüm ürünlerin fiyatını hesaplar.
+        /// </summary>
+        /// <param name="customerID"></param>
+        /// <returns></returns>
+        public double CalculateAll(Guid customerID)
+        {
+            double TotalPrice = 0;
+            List<Order> orders = _context.Orders.AsQueryable().Where(x => x.CustomerID == customerID && x.Status == Core.Enum.Status.Active).ToList();
+            List<OrderDetail> orderDetails = new List<OrderDetail>();
+
+            foreach (var item in orders)
+            {
+                //orderDetails.Add(_orderDetailRepository.GetByDefault(x => x.OrderID == item.ID));
+                orderDetails.Add(_context.OrderDetails.FirstOrDefault(x => x.OrderID == item.ID));
+
+            }
+
+            foreach (var item in orderDetails)
+            {
+                TotalPrice += item.TotalPrice;
+            }
+
+            return TotalPrice;
         }
 
     }

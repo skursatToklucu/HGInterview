@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HizliGeliyoEcom.Entities.Entities
 {
-    public class Customer : UserEntity
+    public class Customer : CoreEntity
     {
 
         public virtual ICollection<Order> Orders { get; set; }

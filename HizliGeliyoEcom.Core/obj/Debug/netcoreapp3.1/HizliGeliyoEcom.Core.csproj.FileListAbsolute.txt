@@ -1,0 +1,12 @@
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.deps.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.runtimeconfig.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.runtimeconfig.dev.json
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\bin\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.csprojAssemblyReference.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.AssemblyInfoInputs.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.AssemblyInfo.cs
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.csproj.CoreCompileInputs.cache
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.dll
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.pdb
+C:\Users\skurs\source\repos\HizliGeliyoEcom\HizliGeliyoEcom.Core\obj\Debug\netcoreapp3.1\HizliGeliyoEcom.Core.genruntimeconfig.cache

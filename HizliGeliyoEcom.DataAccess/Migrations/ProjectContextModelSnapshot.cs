@@ -45,6 +45,57 @@ namespace HizliGeliyoEcom.DataAccess.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Order", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<Guid?>("CustomerID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CustomerID");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.OrderDetail", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("OrderID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("OrderID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Product", b =>
                 {
                     b.Property<int>("ID")
@@ -54,9 +105,6 @@ namespace HizliGeliyoEcom.DataAccess.Migrations
 
                     b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("CustomerID")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -75,24 +123,51 @@ namespace HizliGeliyoEcom.DataAccess.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("CustomerID");
-
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Product", b =>
+            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Order", b =>
                 {
                     b.HasOne("HizliGeliyoEcom.Entities.Entities.Customer", "Customer")
-                        .WithMany("Products")
+                        .WithMany("Orders")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Customer");
                 });
 
+            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.OrderDetail", b =>
+                {
+                    b.HasOne("HizliGeliyoEcom.Entities.Entities.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("HizliGeliyoEcom.Entities.Entities.Product", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Customer", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("HizliGeliyoEcom.Entities.Entities.Product", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }

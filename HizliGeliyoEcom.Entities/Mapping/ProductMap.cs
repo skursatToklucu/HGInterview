@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HizliGeliyoEcom.Entities.Mapping
 {
-    public class ProductMap : ProductMap<Product>
+    public class ProductMap : SideMap<Product>
     {
 
         public override void Configure(EntityTypeBuilder<Product> builder)

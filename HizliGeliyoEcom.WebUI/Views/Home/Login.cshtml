@@ -37,7 +37,7 @@
                     <form asp-action="Login" asp-controller="Home" method="post">
                         <div class="form-group first">
                             <label for="E-Posta Adresi">E-Posta Adresi</label>
-                            <input type="text" class="form-control" placeholder="Kullanıcı Adı" asp-for="Email">
+                            <input type="text" class="form-control" placeholder="E-Mail" asp-for="Email">
                             @Html.ValidationMessageFor(model => model.Email)
                         </div>
                         <div class="form-group last mb-3">

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<HizliGeliyoEcom.Entities.Entities.Product>
+
+@{
+    ViewData["Title"] = "ShoppingBasket";
+}
+
+<h1>Sepetim</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                Ürün Adı
+            </th>
+            <th>
+                Fiyat($)
+            </th>
+            <th>
+                Ürün Açıklaması
+            </th>
+            <th>
+                Kategori
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@item.Image" style="width:300px;height:auto" class="img-fluid" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    <a asp-action="DismissProduct" asp-route-id="@item.ID">Sepetten Cıkar</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td> Toplam Tutar = </td>
+            <td>@ViewBag.TotalPrice</td>
+            <td><a class="btn btn-outline-success" style="text-decoration:none;cursor:pointer" asp-action="CompleteShopping" asp-controller="Shop"> Alışverişi Tamamla</a></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
