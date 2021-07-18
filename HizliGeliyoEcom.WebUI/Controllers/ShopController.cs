@@ -68,8 +68,15 @@ namespace HizliGeliyoEcom.WebUI.Controllers
         {
             _orderDetailRepository.DeActivate(_orderDetailRepository.GetByDefault(x => x.ProductID == id).ID);
 
-
             return RedirectToAction("ShoppingBasket", "Shop");
+        }
+
+
+        public IActionResult Payment()
+        {
+            //Odeme ve Kredi Karti bilgilerini girme islemini yapmadım.
+
+            return View();
         }
     }
 }

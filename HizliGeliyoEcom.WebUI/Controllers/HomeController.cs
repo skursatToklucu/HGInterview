@@ -37,7 +37,9 @@ namespace HizliGeliyoEcom.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(Customer customer, string email)
         {
-            if (_userRepository.CheckEmail(customer, email) && _userRepository.CheckPassword(customer, customer.Password))
+            Customer newCustomer = _userRepository.GetByDefault(x => x.Email == email);
+
+            if (newCustomer.Email == email && newCustomer.Password == customer.Password)
             {
                 Guid getID = _userRepository.GetByDefault(x => x.Email == email).ID;
                 await HttpContext.SignInAsync(_userRepository.LoginClaims(customer));
